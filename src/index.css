@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.button {
+  cursor: pointer;
+}
+
+#header {
+  padding: 40px 0;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#add {
+  margin-top: 50px;
+}
+
+.add h1 {
+  margin: 20px 0;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#list h1 {
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: 40px;
+}
+.add input {
+  margin: 10px 0;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+
+.add button {
+  margin: 10px 0;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.card::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  transition: opacity 0.3s ease-in-out;
+  animation: glowning 20s linear infinite;
+  border-radius: 10x;
+  opacity: 0;
+}
+
+@keyframes glowning {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card img {
+  width: 200px;
+  border-radius: 10px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: slategray;
+  width: 200px;
+}
+
+.card_txt {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  color: white;
+}
+
+.card button {
+  padding: 2px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+}
