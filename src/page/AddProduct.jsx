@@ -6,14 +6,20 @@ const AddProduct = () => {
 
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
+  const [descr, setDescr] = useState("");
+  const [backround, setBackround] = useState("");
 
   function addProduct() {
     let newObj = {
       name: name,
       image: image,
+      descr: descr,
+      backround: backround,
     };
     setName("");
     setImage("");
+    setDescr("");
+    setBackround("");
 
     createProduct(newObj);
     readProduct();
@@ -35,6 +41,18 @@ const AddProduct = () => {
             placeholder="image"
             onChange={(e) => setImage(e.target.value)}
             value={image}
+          />
+          <input
+            type="text"
+            placeholder="descr"
+            onChange={(e) => setDescr(e.target.value)}
+            value={descr}
+          />
+          <input
+            type="text"
+            placeholder="backround"
+            onChange={(e) => setBackround(e.target.value)}
+            value={backround}
           />
           <button onClick={addProduct}>Create</button>
         </div>

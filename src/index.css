@@ -162,3 +162,25 @@ a {
   background-color: red;
   color: white;
 }
+
+.list_in {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.image1 {
+  position: relative;
+}
+
+.about {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  align-items: center;
+}
+
+.about img {
+  width: 400px;
+}
